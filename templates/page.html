@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havasu Image Grid</title>
+    <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+
+        .grid-item {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Havasu</h1>
+    <div class="image-grid">
+        <div class="grid-item"><img src="{{ url_for('static', filename='graph1.png') }}" alt="Graph 1"></div>
+        <div class="grid-item"><img src="{{ url_for('static', filename='graph2.png') }}" alt="Graph 2"></div>
+        <div class="grid-item"><img src="{{ url_for('static', filename='graph3.png') }}" alt="Graph 3"></div>
+        <div class="grid-item"><img src="{{ url_for('static', filename='graph4.png') }}" alt="Graph 4"></div>
+    </div>
+</body>
+</html>
